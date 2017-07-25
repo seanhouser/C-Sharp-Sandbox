@@ -1,0 +1,6 @@
+E:\Sean\Documents\GitHub\C# Sandbox\Sandbox\Sandbox\bin\Debug\Sandbox.exe.config
+E:\Sean\Documents\GitHub\C# Sandbox\Sandbox\Sandbox\bin\Debug\Sandbox.exe
+E:\Sean\Documents\GitHub\C# Sandbox\Sandbox\Sandbox\bin\Debug\Sandbox.pdb
+E:\Sean\Documents\GitHub\C# Sandbox\Sandbox\Sandbox\obj\Debug\Sandbox.csprojResolveAssemblyReference.cache
+E:\Sean\Documents\GitHub\C# Sandbox\Sandbox\Sandbox\obj\Debug\Sandbox.exe
+E:\Sean\Documents\GitHub\C# Sandbox\Sandbox\Sandbox\obj\Debug\Sandbox.pdb

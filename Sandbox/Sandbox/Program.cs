@@ -10,7 +10,20 @@ namespace Sandbox
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(word_reverse("Display the pattern like pyramid using the alphabet."));
+            int[] arr1 = { 1, 3, -5, 4 };
+            int[] arr2 = { 1, 4, -5, -2 };
+            Console.WriteLine(String.Join(",", mul_arrays(arr1, arr2)));
+        }
+
+        //Multiple corresponding elements of two arrays
+        public static int[] mul_arrays(int[] arr1, int[] arr2)
+        {
+            int[] arr_result = new int[arr1.Length];
+            for (int i = 0; i < arr1.Length; ++i)
+            {
+                arr_result[i] = arr1[i] * arr2[i];
+            }
+            return arr_result;
         }
 
         //String reverse by word

@@ -10,9 +10,151 @@ namespace Sandbox
     {
         static void Main(string[] args)
         {
-            int[] arr1 = { 1, 3, -5, 4 };
-            int[] arr2 = { 1, 4, -5, -2 };
-            Console.WriteLine(String.Join(",", mul_arrays(arr1, arr2)));
+            Console.WriteLine("enter numbers");
+            string s = Console.ReadLine();
+            Console.WriteLine("enter the number to be counted");
+            string number = Console.ReadLine();
+            Console.WriteLine("Your number, {0}, was counted {1} times", number, count_number_repeat(number, s));
+        }
+
+        //count a specified number in a given array of integers
+        public static int count_number_repeat(string number, string s)
+        {
+            int count = 0;
+            string[] nums = s.Split(' ');
+            foreach (string num in nums)
+            {
+                if (num == number)
+                    ++count;
+            }
+            return count;
+        }
+
+        //create a new string of every other character (odd position) from the first position of a given string
+        public static string odd_chars(string s)
+        {
+            string result = "";
+            for (int i = 0; i < s.Length; i += 2)
+            {
+                result += s[i];
+            }
+            return result;
+        }
+
+        /* create a new string where the first 4 characters will be in lower case. If the string is less than 4 characters then make the whole              string in upper case
+         * */
+        public static string to_caps(string s)
+        {
+            string result = "";
+            if (s.Length >= 4)
+            {
+                string front = s.ToLower();
+                result = front.Substring(0, 4) + s.Substring(4, s.Length-4);
+            }
+            else
+            {
+                result = result.ToUpper();
+            }
+            return result;
+        }
+
+        public static bool check_1to3_w(string s)
+        {
+            int count = 0;
+            foreach (var c in s)
+            {
+                if (c == 'w' || c == 'W')
+                    ++count;
+            }
+            return (count >= 1 && count <= 3);
+        }
+
+        //check the nearest value of 20 of two given integers and return 0 if two numbers are same
+        public static int near_20(int first, int second)
+        {
+            int first_diff = Math.Abs(first - 20);
+            int second_diff = Math.Abs(second - 20);
+            if (first == second)
+                return 0;
+            else if (first_diff < second_diff)
+                return first;
+            else
+                return second;
+        }
+
+        //find the largest and lowest values from three integer values
+        public static void largest_lowest(int first, int second, int third)
+        {
+            int[] nums = {first, second, third};
+            int largest = first;
+            int smallest = first;
+            for (int i = 0; i < nums.Length; ++i)
+            {
+                if (nums[i] > largest)
+                    largest = nums[i];
+                if (nums[i] < smallest)
+                    smallest = nums[i];
+            }
+            Console.WriteLine("Largest: {0}\nSmallest: {1}", largest, smallest);
+        }
+
+        /*get a new string of two characters from a given string. The first and second character of the given string must be "P" and "H", so PHP            will be "PH".
+         * */
+        public static string second_first_PH(string s)
+        {
+            string result = s.Substring(1, 2);
+            if (result == "PH")
+                return result;
+            else
+                return s;
+        }
+
+        //check if "HP" appears at second position in a string and returns the string without "HP"
+        public static bool check_HP(string s)
+        {
+            return (s.Substring(1, 2) == "HP");
+        }
+
+        //Check if both numbers are in the range -10..10
+        public static bool in_range(int first, int second)
+        {
+            return (first < 10 && first > -10 && second < 10 && second > -10);
+        }
+
+        //Check if the first number is <100 and the second number is >250
+        public static bool check_numbers(int first, int second)
+        {
+            return (first < 100 && second > 250);
+        }
+
+        //Check if first word matches param
+        public static bool check_first(string s, string word)
+        {
+            return (s.Substring(0, word.Length) == word);
+        }
+
+        //Check if int is multiple of 3 or 7
+        public static bool multiple_3_7(int n)
+        {
+            return (n % 3 == 0 || n % 7 == 0);
+        }
+
+        //Exrracy last four of a string and repeat
+        public static void extract_four(string s)
+        {
+            if (s.Length >= 4)
+                Console.WriteLine("{0}{1}{2}{3}", s.Substring(s.Length - 4, 4), s.Substring(s.Length - 4, 4), s.Substring(s.Length - 4, 4), s.Substring(s.Length - 4, 4));
+            else
+                Console.WriteLine(s);
+
+            /*
+             * OR
+             *  string extracted = s.Substring(s.Length - 4, 4);
+                if (s.Length >= 4)
+                    Console.WriteLine("{0}{1}{2}{3}", extracted, extracted, extracted, extracted);
+                else
+                    Console.WriteLine(s);
+             */
         }
 
         //Multiple corresponding elements of two arrays

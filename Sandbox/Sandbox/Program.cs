@@ -1,4 +1,6 @@
-﻿using System;
+﻿//AUTHOR: Sean Houser
+//DATE: 9/12/2017
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +12,57 @@ namespace Sandbox
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("enter numbers");
-            string s = Console.ReadLine();
-            Console.WriteLine("enter the number to be counted");
-            string number = Console.ReadLine();
-            Console.WriteLine("Your number, {0}, was counted {1} times", number, count_number_repeat(number, s));
+            int[] int_array = { 0, 1, 2, 3, 2, 3 };
+            Console.WriteLine("The number of duplicates is {0}", CountArrayDuplicates(int_array));
+        }
+
+        //check an array for duplicates
+        public static int CountArrayDuplicates(int[] int_array)
+        {
+            int count = 0;
+
+            for (int i = 0; i < int_array.Length; ++i)
+            {
+                for (int j = i; j < int_array.Length - 1; ++j)
+                {
+                    if (int_array[j + 1] == int_array[i])
+                    {
+                        Console.WriteLine("Element {0} is {1} and matches element {2}", i, int_array[i], j);
+                        ++count;
+                    }
+                }
+            }
+            return count;
+        }
+
+        //check an array for duplicates
+        public static void CheckArrayDuplicates(int[] int_array)
+        {
+            for (int i = 0; i < int_array.Length; ++i)
+            {
+                for (int j = i; j < int_array.Length - 1; ++j)
+                {
+                    if (int_array[j + 1] == int_array[i])
+                    {
+                        Console.WriteLine("Element {0} is {1} and matches element {2}", i, int_array[i], j);
+                    }
+                }
+            }
+        }
+
+        //IN: string to be reversed and checked as a palindrome
+        //OUT: reversed string
+        public static string reverse_string(string palindrome_string)
+        {
+            string reverse_string = "";
+
+            char[] char_array_of_string = palindrome_string.ToCharArray();
+            for (int i = char_array_of_string.Length-1; i >= 0; --i)
+            {
+                reverse_string += char_array_of_string[i];
+            }
+
+            return reverse_string;
         }
 
         //count a specified number in a given array of integers
@@ -41,7 +89,7 @@ namespace Sandbox
             return result;
         }
 
-        /* create a new string where the first 4 characters will be in lower case. If the string is less than 4 characters then make the whole              string in upper case
+        /* create a new string where the first 4 characters will be in lower case. If the string is less than 4 characters then make the whole string in upper case
          * */
         public static string to_caps(string s)
         {

@@ -1,6 +1,0 @@
-E:\Sean\Documents\GitHub\C# Sandbox\Assessment Questions\PalindromeCheck\PalindromeCheck\bin\Debug\PalindromeCheck.exe.config
-E:\Sean\Documents\GitHub\C# Sandbox\Assessment Questions\PalindromeCheck\PalindromeCheck\bin\Debug\PalindromeCheck.exe
-E:\Sean\Documents\GitHub\C# Sandbox\Assessment Questions\PalindromeCheck\PalindromeCheck\bin\Debug\PalindromeCheck.pdb
-E:\Sean\Documents\GitHub\C# Sandbox\Assessment Questions\PalindromeCheck\PalindromeCheck\obj\Debug\PalindromeCheck.exe
-E:\Sean\Documents\GitHub\C# Sandbox\Assessment Questions\PalindromeCheck\PalindromeCheck\obj\Debug\PalindromeCheck.pdb
-E:\Sean\Documents\GitHub\C# Sandbox\Assessment Questions\PalindromeCheck\PalindromeCheck\obj\Debug\PalindromeCheck.csprojResolveAssemblyReference.cache

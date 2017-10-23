@@ -10,11 +10,61 @@ namespace Sandbox
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
-            int[] int_array = { 0, 1, 2, 3, 2, 3 };
-            Console.WriteLine("The number of duplicates is {0}", CountArrayDuplicates(int_array));
+            
         }
+
+
+        private static void writeOutput(object o)
+        {
+            if (o == null)
+                Console.WriteLine("null");
+            else
+                Console.WriteLine(o.ToString());
+        }
+
+        struct MyStruct
+        {
+            public int DataInt;
+            public string DataStr;
+        }
+
+        static void MyFunction(MyStruct Arg)
+        {
+            Arg.DataInt = 6;
+            Arg.DataStr = "Six";
+        }
+
+        
+
+        interface ISquare
+        {
+            int X { get; }
+        }
+
+        interface IRectabgle
+        {
+            int X();
+        }
+
+
+        static Func<int, int> X(Func<int, int, int> f)
+        {
+            Console.WriteLine(f.Method.Name);
+            return a => f(a, 4);
+        }
+        static int Sum(int x, int y)
+        {
+            return x + y;
+        }
+
+        static void foo(string s) { Console.WriteLine("string"); }
+        static void foo(int i) { Console.WriteLine("integer"); }
+        static void foo(object o) { Console.WriteLine("object"); }
+
 
         //check an array for duplicates
         public static int CountArrayDuplicates(int[] int_array)
